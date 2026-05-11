@@ -60,7 +60,6 @@ class MedicineAgent:
         else:
             print(self.room, "Patient is healthy")
 
-        # Move to next room
         if self.room == "Room A":
             self.room = "Room B"
         else:
