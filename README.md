@@ -40,8 +40,10 @@
 <p>Treat unhealthy patients in each room. And check for the unhealthy patients in random room</p>
 <h3>STEP 5:</h3>
 <p>Measure the performance parameters: For each treatment performance incremented, for each movement performance decremented</p>
-## Program
-~~~
+<h3>Program </h3>
+<hr>
+
+```
 import random
 
 class MedicineAgent:
@@ -80,7 +82,9 @@ for i in range(5):
 
     random_room = random.choice(["Room A", "Room B"])
     rooms[random_room] = random.uniform(97, 103)
-~~~
+```
+</hr>
+
 ### Output
 <img width="1727" height="776" alt="output" src="https://github.com/user-attachments/assets/40bf7ac6-e3b9-4c20-9caa-3685a2c5ab7a" />
 
