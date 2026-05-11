@@ -1,6 +1,6 @@
 <h1>ExpNo 1 :Developing AI Agent with PEAS Description</h1>
-<h3>Name: Saravanan N</h3>
-<h3>Register Number/Staff Id: TSML006</h3>
+<h3>Name: GEETHU R</h3>
+<h3>Register Number: 212224040089 </h3>
 
 
 <h3>AIM:</h3>
@@ -40,3 +40,49 @@
 <p>Treat unhealthy patients in each room. And check for the unhealthy patients in random room</p>
 <h3>STEP 5:</h3>
 <p>Measure the performance parameters: For each treatment performance incremented, for each movement performance decremented</p>
+## Program
+~~~
+import random
+
+class MedicineAgent:
+    def __init__(self):
+        self.room = "Room A"
+
+    def check_patient(self, rooms):
+        temp = rooms[self.room]
+
+        if temp > 98.5:
+            print(self.room, "Patient has fever")
+            print("Giving medicine")
+            rooms[self.room] = 98.0
+        else:
+            print(self.room, "Patient is healthy")
+
+        # Move to next room
+        if self.room == "Room A":
+            self.room = "Room B"
+        else:
+            self.room = "Room A"
+
+        print("Moving to", self.room)
+        print("-------------------")
+
+rooms = {
+    "Room A": random.uniform(97, 102),
+    "Room B": random.uniform(97, 102)
+}
+
+agent = MedicineAgent()
+
+for i in range(5):
+    print("Step", i + 1)
+    agent.check_patient(rooms)
+
+    random_room = random.choice(["Room A", "Room B"])
+    rooms[random_room] = random.uniform(97, 103)
+~~~
+### Output
+<img width="1727" height="776" alt="output" src="https://github.com/user-attachments/assets/40bf7ac6-e3b9-4c20-9caa-3685a2c5ab7a" />
+
+### Result
+Hence, the solution for the given AI problem is found.
